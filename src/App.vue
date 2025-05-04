@@ -30,8 +30,24 @@ const currentTabComponent = computed(() => tabs.find(tab => tab.key === currentT
         </li>
       </ul>
     </nav>
-    <component :is="currentTabComponent" />
-
+    <Transition mode="out-in" name="fade">
+       <component :is="currentTabComponent" />
+     </Transition>
 
   </main>
 </template>
+
+
+<style scoped>
+ /* we will explain what these classes do next! */
+ .fade-enter-active,
+ .fade-leave-active {
+   transition: all 0.2s ease;
+ }
+ 
+ .fade-enter-from,
+ .fade-leave-to {
+   opacity: 0;
+   scale: 0.95;
+ }
+ </style>
