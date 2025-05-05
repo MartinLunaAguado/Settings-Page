@@ -31,8 +31,10 @@ const currentTabComponent = computed(() => tabs.find(tab => tab.key === currentT
       </ul>
     </nav>
     <FadeTransition>
-       <component :is="currentTabComponent" />
-     </FadeTransition>
+      <KeepAlive>
+         <component :is="currentTabComponent" />
+      </KeepAlive>
+    </FadeTransition>
 
   </main>
 </template>
