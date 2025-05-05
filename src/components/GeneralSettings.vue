@@ -1,7 +1,7 @@
 <template>  
  <div>
      <h2 class="text-2xl mb-4">General</h2>
-     <form class="space-y-4 mx-auto" @submit.prevent="save">
+    <form class="space-y-4 mx-auto" @submit.prevent="save">
 
 <div>
         <label class="mb-1">Username</label>

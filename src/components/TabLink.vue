@@ -11,8 +11,6 @@
 
 
 
-
-
 <script setup lang="ts">  
 import { Tab } from '@/types';
 import { computed } from 'vue';
